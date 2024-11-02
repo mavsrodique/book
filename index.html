@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOK WORM.co</title>
+    <link rel="stylesheet" href="./CSS/WEB BOOK 2.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="IMAGE/bookworm logo.png" alt="BOOK WORM Logo" id="logo">
+            <h1>BOOK WORM</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="filterBooks('all')">All Books</a></li>
+                <li><a href="#" onclick="filterBooks('fiction')">Fiction</a></li>
+                <li><a href="#" onclick="filterBooks('non-fiction')">Non-Fiction</a></li>
+                <li><a href="#" onclick="filterBooks('manga')">Manga</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="search-input" placeholder="Search for books..." oninput="searchBooks()">
+    </header>
+
+    <main>
+        <section id="image-container">
+            <!-- Book Images -->
+            <div class="image" data-category="fiction">
+                <img src="IMAGE/FICTION/TLOTR.webp" alt="The Lord of The Rings: The Fellowship of The Ring" data-description="An epic high-fantasy novel written by J.R.R. Tolkien." />
+            </div>
+            <div class="image" data-category="non-fiction">
+                <img src="IMAGE/NON-FICTION/WEB DEVELOPMENT.jpg" alt="Web Development" data-description="A comprehensive guide to web development, covering essential skills." />
+            </div>
+            <div class="image" data-category="fiction">
+                <img src="IMAGE/FICTION/EL FILI.jpg" alt="El Filibusterismo" data-description="A novel by Jose Rizal that explores themes of social justice." />
+            </div>
+            <div class="image" data-category="fiction">
+                <img src="../IMAGE/FICTION/GAME OF THRONES.jpg" alt="Game of Thrones" data-description="A fantasy novel series by George R.R. Martin, filled with intrigue and adventure." />
+            </div>
+            <div class="image" data-category="fiction">
+                <img src="IMAGE/FICTION/NOLI ME TANGERE.jpg" alt="Noli Me Tangere" data-description="A novel by Jose Rizal that critiques colonialism in the Philippines." />
+            </div>
+            <div class="image" data-category="non-fiction">
+                <img src="IMAGE/NON-FICTION/HTML BOOK.jpg" alt="HTML Book" data-description="An essential guide to learning HTML for web development." />
+            </div>
+            <div class="image" data-category="fiction">
+                <img src="IMAGE/FICTION/THE HOBBIT.jpg" alt="The Hobbit" data-description="A fantasy novel by J.R.R. Tolkien that follows Bilbo Baggins' adventures." />
+            </div>
+            <div class="image" data-category="fiction">
+                <img src="IMAGE/FICTION/HARRY POTTER AND THE PHILOSOPHER STONE.jpg" alt="Harry Potter and the Philosopher's Stone" data-description="The first book in J.K. Rowling's famous fantasy series about a young wizard." />
+            </div>
+            <div class="image" data-category="non-fiction">
+                <img src="IMAGE/NON-FICTION/CSS BOOK.jpg" alt="Computer Programming" data-description="A beginner's guide to CSS, essential for styling web pages." />
+            </div>
+            <div class="image" data-category="manga">
+                <img src="IMAGE/COMICS/BLACK CLOVER.jpg" alt="Black Clover" data-description="A popular manga series about magic and rivalry." />
+            </div>
+            <div class="image" data-category="manga">
+                <img src="IMAGE/COMICS/DORAEMON.jpg" alt="Doraemon" data-description="A beloved manga about a robotic cat from the future." />
+            </div>
+            <div class="image" data-category="manga">
+                <img src="IMAGE/COMICS/JJK.jpg" alt="Jujutsu Kaisen" data-description="A manga series that blends action and supernatural elements." />
+            </div>
+            <div class="image" data-category="manga">
+                <img src="IMAGE/COMICS/ONE PIECE.jpg" alt="One Piece" data-description="A long-running manga series about pirates and adventure." />
+            </div>
+            <div class="image" data-category="manga">
+                <img src="IMAGE/COMICS/BLEACH.jpg" alt="Bleach" data-description="A manga about a teenager who becomes a Soul Reaper." />
+            </div>
+            <div class="image" data-category="manga">
+                <img src="IMAGE/COMICS/DEMON SLAYER.jpg" alt="Demon Slayer" data-description="A manga about a young boy fighting demons to save his sister." />
+            </div>
+            <div class="image" data-category="manga">
+                <img src="IMAGE/COMICS/ONE PUNCH MAN.jpg" alt="One Punch Man" data-description="A comedic take on superhero stories featuring an unbeatable hero." />
+            </div>
+            <div class="image" data-category="manga">
+                <img src="IMAGE/COMICS/HUNTERXHUNTER.webp" alt="Hunter x Hunter" data-description="An adventurous manga about a young boy searching for his father." />
+            </div>
+            <div class="image" data-category="fiction">
+                <img src="IMAGE/FICTION/THE CHRONICLES OF NARNIA.jpg" alt="The Chronicles of Narnia" data-description="A fantasy series by C.S. Lewis that transports readers to another world." />
+            </div>
+            <div class="image" data-category="fiction">
+                <img src="IMAGE/FICTION/THE GOD FATHER.jpg" alt="The Godfather" data-description="A classic novel about the powerful Italian-American crime family." />
+            </div>
+            <div class="image" data-category="non-fiction">
+                <img src="IMAGE/NON-FICTION/CALCULUS.jpg" alt="Calculus" data-description="A comprehensive textbook covering the fundamentals of calculus." />
+            </div>
+            <div class="image" data-category="non-fiction">
+                <img src="IMAGE/NON-FICTION/HIPHOP.jpg" alt="Hip Hop" data-description="An insightful book on the evolution of hip hop culture." />
+            </div>
+            <div class="image" data-category="non-fiction">
+                <img src="IMAGE/NON-FICTION/MUSIC THEORY.jpg" alt="Music Theory" data-description="A guide to understanding music theory and its principles." />
+            </div>
+            <div class="image" data-category="non-fiction">
+                <img src="IMAGE/NON-FICTION/PHILIPPINE HISTORY.jpg" alt="Philippine History" data-description="An informative book on the history of the Philippines." />
+            </div>
+            <div class="image" data-category="non-fiction">
+                <img src="IMAGE/NON-FICTION/QUANTUM PHYSICS.jpg" alt="Quantum Physics" data-description="A textbook exploring the principles of quantum physics." />
+            </div>
+        </section>
+    
+        <!-- Modal for Image Description -->
+        <div class="modal" id="image-modal">
+            <div class="modal-content">
+                <span class="close" id="close-modal">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BOOK WORM.co. All rights reserved.</p>
+    </footer>
+
+    <script src="./JAVASCRIPT/WEB BOOK 2.js"></script>
+</body>
+</html>
