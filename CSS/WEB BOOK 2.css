@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2980b9;
+    color: #333;
+}
+
+header {
+    background: #2B2D42;
+    color: #18da28;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 10px;
+}
+
+#logo {
+    height: 100px; 
+    margin-right: 15px; 
+}
+
+h1 {
+    font-size: 48px; 
+    margin: 0; 
+    color: #18da28;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #2699d3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #f0f0f0;
+}
+
+
+#search-input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 300px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+
+.image {
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background:#2B2D42;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    #search-input {
+        width: 100%; /
+    }
+
+    #image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 90%; 
+    }
+
+    .header-content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #logo {
+        height: 80px; 
+        margin-bottom: 10px; 
+    }
+
+    h1 {
+        font-size: 36px; 
+    }
+}
